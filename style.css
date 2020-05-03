@@ -2,20 +2,85 @@
 
 :root{
     /*colors*/
-    --DRed: hsl(0, 36%, 70%); /*primary*/
-    --SRed: hsl(0, 93%, 68%); /*primary*/
-    --DGRed: hsl(0, 6%, 24%); /*neutral*/
+    --red: hsl(0, 36%, 70%);
+    --softred: hsl(0, 93%, 68%);
+    --darkgrayred: hsl(0, 6%, 24%);
     /*form factor*/
     --mobile: 375px;
     --desktop: 1440px;
     /*typography*/
-    --font: "Josefin Sans", sans-serif;
+    --font: 'Josefin Sans', sans-serif;
     --bold: 600;
     --mid: 400;
     --light: 300;
 }
 
+
 html{
     box-sizing: border-box;
+    padding: 0;
     font-size: 16px;
 }
+
+
+.title{
+    grid-area: title;
+    display: flex;
+    align-items: center;
+}
+
+.title img{
+    width: 130px;
+    position: relative;
+    left: 15%;
+}
+
+.hero{grid-area:hero;}
+
+.content{grid-area: content;}
+
+.content h1{
+    font-family: var(--font);
+    color: var(--darkgrayred);
+    font-weight: var(--bold);
+}
+
+.content h1 span{
+    font-weight: var(--light);
+    color: var(--red);
+}
+
+.footer{grid-area: footer;}
+
+.container{
+    display: grid;
+    grid-template-areas:
+    "title hero hero"
+    "content hero hero"
+    "footer footer footer";
+    grid-template-rows: 150px auto 50px;
+    grid-gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
