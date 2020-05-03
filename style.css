@@ -63,6 +63,17 @@ html{
     color: var(--red);
 }
 
+.content p{
+    font-family: var(--font);
+    color: var(--red);
+    font-weight: var(--mid);
+    font-size: .89rem;
+    line-height: 1.5rem;
+    padding-right: 350px;
+    margin-bottom: 50px;
+    position: relative;
+    left: 15%;
+}
 .footer{grid-area: footer;}
 
 .container{
