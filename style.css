@@ -43,6 +43,19 @@ html{
     font-family: var(--font);
     color: var(--darkgrayred);
     font-weight: var(--bold);
+    font-size: 3rem;
+    letter-spacing: 1.12rem;
+    line-height: 3rem;
+    position: relative;
+    left: 35%;
+    text-transform: uppercase;
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    display: table-caption;
+    display: -ms-grid;
+    -ms-grid-columns: min-content;
 }
 
 .content h1 span{
