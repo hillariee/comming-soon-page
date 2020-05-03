@@ -74,6 +74,23 @@ html{
     position: relative;
     left: 15%;
 }
+
+.content form{
+    padding: 1rem;
+}
+.content form input{
+    width: 350px;
+    /* border: none; */
+    border: thin solid var(--darkgrayred);
+    border-radius: 20px;
+    padding: 15px;
+    outline: none;
+    opacity: .3;
+    position: relative;
+    left: 10%;
+}
+
+
 .footer{grid-area: footer;}
 
 .container{
