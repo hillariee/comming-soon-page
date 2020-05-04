@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+    /*colors*/
+    $red: hsl(0, 36%, 70%);
+    $softred: hsl(0, 93%, 68%);
+    $darkgrayred: hsl(0, 6%, 24%);
+    $grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    $grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /*form factor*/
+    $mobile: 375px;
+    $desktop: 1440px;
+    /*typography*/
+    $font: 'Josefin Sans', sans-serif;
+    $bold: 600;
+    $mid: 400;
+    $light: 300;
+
+
+html{
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 16px;
+}
+
+
+.title{
+    grid-area: title;
+    display: flex;
+    align-items: center;
+}
+
+.title img{
+    width: 130px;
+    position: relative;
+    left: 15%;
+}
+
+.hero{grid-area:hero;}
+
+.content{grid-area: content;}
+
+.content h1{
+    font-family: $font;
+    color: $darkgrayred;
+    font-weight: $bold;
+    font-size: 3rem;
+    letter-spacing: 1.12rem;
+    line-height: 3rem;
+    position: relative;
+    left: 35%;
+    text-transform: uppercase;
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    display: table-caption;
+    display: -ms-grid;
+    -ms-grid-columns: min-content;
+}
+
+.content h1 span{
+    font-weight: $light;
+    color: $red;
+}
+
+.content p{
+    font-family: $font;
+    color: $red;
+    font-weight: $mid;
+    font-size: .89rem;
+    line-height: 1.5rem;
+    padding-right: 350px;
+    margin-bottom: 50px;
+    position: relative;
+    left: 15%;
+}
+
+.content form{
+    padding: 1rem;
+}
+.content form input{
+    width: 350px;
+    /* border: none; */
+    border: thin solid $darkgrayred;
+    border-radius: 20px;
+    padding: 15px;
+    outline: none;
+    opacity: .3;
+    position: relative;
+    left: 10%;
+}
+
+/* .content form input:invalid{
+    border-color: red;
+} */
+
+.content form .error-indicator{
+    position: relative;
+    top: 7px;
+    right: 5px;
+}
+
+.content form button{
+    width: 100px;
+    border-radius: 30px;
+    border: none;
+    height: 50px;
+    position: relative;
+    top: 4px;
+    background: $grad2;
+    cursor: pointer;
+    /* transition: color .3s ease-in; */
+}
+
+.content form button:hover{
+    box-shadow:  0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.footer{grid-area: footer;}
+
+.container{
+    display: grid;
+    grid-template-areas:
+    "title hero hero"
+    "content hero hero"
+    "footer footer footer";
+    grid-template-rows: 150px auto 50px;
+    grid-gap: 5px;
+}
+
+/* @media only screen and (max-width: $mobile){
+    .container{
+
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
