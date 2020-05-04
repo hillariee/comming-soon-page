@@ -2,9 +2,9 @@ console.log("i am connected")
 
 const form = document.getElementById('emailForm');
 const email = document.getElementById('email')
+ 
 
-
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkMailInput();
@@ -16,10 +16,10 @@ function checkMailInput() {
 
     if (emailValue === ''){
         setErrorForMail(email, 'Field cannot be blank')
-    } else if (!isEmail(emailValue)) {
+    } else if (!isMail(emailValue)) {
         setErrorForMail(email, 'This is not a valid email address')
     } else {
-        return
+        setSuccessForMail(email);
     }
 
 }
@@ -33,9 +33,10 @@ function setErrorForMail(input, message) {
 
 //TODO: CREATE FUNCTION TO SET SUCCESS
 
-// function setSuccessForMail(input) {
-    
-// }
+function setSuccessForMail(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control';
+}
 
 //TODO: Validate Email
 function isMail(email) {

@@ -114,6 +114,7 @@ html {
   -webkit-transition: background 3s ease-out;
   transition: background 3s ease-out;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  outline: none;
 }
 
 .content form button:hover {
@@ -126,7 +127,7 @@ html {
   border-color: red;
 }
 
-.fomr-control.error .error-indicator {
+.form-control.error .error-indicator {
   visibility: visible;
 }
 
@@ -137,10 +138,10 @@ html {
   color: #f96262;
   position: absolute;
   bottom: 10%;
-  left: 10%;
+  left: 8%;
 }
 
-.fom-control.error small {
+.form-control.error small {
   visibility: visible;
 }
 

@@ -113,12 +113,17 @@ html{
     cursor: pointer;
     transition: background 3s ease-out;
     background: $grad2;
+    outline: none;
 }
 
 .content form button:hover{
     box-shadow:  0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background: $softredlight;
 }
+
+// .form-control{
+//     position: relative;
+// }
 
 .form-control.error input{
     border-color: red;
@@ -135,10 +140,10 @@ html{
     color: $softred;
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 8%;
 }
 
-.fom-control.error small{
+.form-control.error small{
     visibility: visible;
 }
 
