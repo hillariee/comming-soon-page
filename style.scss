@@ -100,6 +100,7 @@ html{
     position: relative;
     top: 7px;
     right: 5px;
+    visibility: hidden;
 }
 
 .content form button{
@@ -119,6 +120,27 @@ html{
     background: $softredlight;
 }
 
+.form-control.error input{
+    border-color: red;
+}
+
+.form-control.error .error-indicator{
+    visibility: visible;
+}
+
+.form-control small{
+    visibility: hidden;
+    font-family: $font;
+    font-weight: $mid;
+    color: $softred;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.fom-control.error small{
+    visibility: visible;
+}
 
 .footer{grid-area: footer;}
 
