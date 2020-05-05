@@ -37,7 +37,10 @@ html{
     left: 15%;
 }
 
-.hero{grid-area:hero;}
+.hero{
+    grid-area: hero;
+}
+
 
 .content{grid-area: content;}
 
@@ -151,39 +154,35 @@ html{
 
 .container{
     display: grid;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
     grid-template-areas:
     "title hero hero"
-    "content hero hero"
-    "footer footer footer";
-    grid-template-rows: 150px auto 50px;
+    "content hero hero";
+    // "footer footer footer";
+    grid-template-rows: 150px auto;
     grid-gap: 5px;
 }
 
-/* @media only screen and (max-width: $mobile){
+
+//TODO:make page responsive
+@media (max-width: 600px){
     .container{
-
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-areas:
+        "title title"
+        "hero hero"
+        "content content";
+        // "footer footer";
+        grid-template-rows: 150px auto 50px;
+        grid-gap: 5px;
     }
-} */
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
