@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
+  
   <link rel="stylesheet" href="./style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
 </head>
-
 <body>
 
-  <selection class="container">
-    <section class="title">
-      <img src="./images/logo.svg" alt="logo">
-    </section>
+  <header class="container">
+    <section class="child hero-content">
+     
+        <img class="logo" src="./images/logo.svg" alt="logo">
+     
+      
+      <content class="content">
+        <h1>
+        	<span>We're</span> coming soon
+        </h1>
+      
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+     
+        <form action="" id="emailForm">
+          <span class="form-control".>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <img src="./images/icon-error.svg" alt="error-icon" class="error-message">
+            <small>Error message</small>
+          </span>
+          <button type="submit">
+            <img src="./images/icon-arrow.svg" alt="arrow-icon">
+          </button>
+        </form>
+      </content>
+    </section> 
 
 
-      <img class="hero" srcset="./images/hero-mobile.jpg 375w,
-                   ./images/hero-desktop.jpg 610w" sizes="(max-width: 36rem) 375px, 610px"
-        src="./images/hero-desktop.jpg" alt="hero-img"/>
-
-
-
-    <content class="content">
-      <h1>
-        <span>We're</span> coming soon
-      </h1>
-
-      <p>
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.
-      </p>
-
-      <form id="emailForm" action="">
-        <span class="form-control">
-        <label for="email"></label>
-          <input type="email" name="" id="email" placeholder="Email Address" />
-          <img class="error-indicator" src="./images/icon-error.svg" alt="">
-          <small class="message">error message</small>     
-      </span>
-        <button type="submit">
-          <img src="./images/icon-arrow.svg" alt="">
-        </button>
-      </form>
-    </content>
-
-    <!-- <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Hill Onyechekwa</a>.
-      </p>
-    </footer> -->
-  </selection>
-
-  <script src="./app.js"></script>
-
+   <section class="child hero-image">
+     <img src="./images/hero-desktop.jpg" alt="">
+   </section>
+  </header>
+  
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
 </body>
-
 </html>

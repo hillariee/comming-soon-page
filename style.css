@@ -1,184 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
-/*colors*/
-/*form factor*/
-/*typography*/
-html {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0;
   font-size: 16px;
+  padding: 0;
+  margin-top: 0;
 }
 
-.title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: title;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.title img {
-  width: 130px;
-  position: relative;
-  left: 15%;
-}
-
-.hero {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: hero;
-}
-
-.content {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: content;
-}
-
-.content h1 {
-  font-family: "Josefin Sans", sans-serif;
-  color: #413a3a;
-  font-weight: 600;
-  font-size: 3rem;
-  letter-spacing: 1.12rem;
-  line-height: 3rem;
-  position: relative;
-  left: 35%;
-  text-transform: uppercase;
-  width: min-intrinsic;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  display: table-caption;
-  display: -ms-grid;
-  -ms-grid-columns: min-content;
-}
-
-.content h1 span {
-  font-weight: 300;
-  color: #ce9797;
-}
-
-.content p {
-  font-family: "Josefin Sans", sans-serif;
-  color: #ce9797;
-  font-weight: 400;
-  font-size: .89rem;
-  line-height: 1.5rem;
-  padding-right: 350px;
-  margin-bottom: 50px;
-  position: relative;
-  left: 15%;
-}
-
-.content form {
-  padding: 1rem;
-}
-
-.content form input {
-  width: 350px;
-  /* border: none; */
-  border: thin solid #413a3a;
-  border-radius: 20px;
-  padding: 15px;
-  outline: none;
-  opacity: .3;
-  position: relative;
-  left: 10%;
-}
-
-/* .content form input:invalid{
-    border-color: red;
-} */
-.content form .error-indicator {
-  position: relative;
-  top: 7px;
-  right: 5px;
-  visibility: hidden;
-}
-
-.content form button {
-  width: 100px;
-  border-radius: 30px;
-  border: none;
-  height: 50px;
-  position: relative;
-  top: 4px;
-  cursor: pointer;
-  -webkit-transition: background 3s ease-out;
-  transition: background 3s ease-out;
-  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  outline: none;
-}
-
-.content form button:hover {
-  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  background: #fdbaba;
-}
-
-.form-control.error input {
-  border-color: red;
-}
-
-.form-control.error .error-indicator {
-  visibility: visible;
-}
-
-.form-control small {
-  visibility: hidden;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  color: #f96262;
-  position: absolute;
-  bottom: 10%;
-  left: 8%;
-}
-
-.form-control.error small {
-  visibility: visible;
-}
-
-.footer {
-  grid-area: footer;
+header {
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
+  width: calc(100vw - 24.5px);
+  min-width: 300px;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
-  width: calc(100vw - 30px);
-  height: calc(100vh - 30px);
-      grid-template-areas: "title hero hero" "content hero hero";
-  -ms-grid-rows: 150px auto;
-      grid-template-rows: 150px auto;
-  grid-gap: 5px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background-color: linear(135deg, white, #fff5f5);
 }
 
-@media (max-width: 600px) {
-  .container {
-    display: -ms-grid;
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-        grid-template-areas: "title title" "hero hero" "content content";
-    -ms-grid-rows: 150px auto 50px;
-        grid-template-rows: 150px auto 50px;
-    grid-gap: 5px;
-  }
+.hero-image img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.hero-content .logo {
+  position: relative;
+  top: 50px;
+  left: 15%;
 }
 
-.attribution a {
-  color: #3e52a3;
+.hero-content .content {
+  position: relative;
+  top: 150px;
+  left: 15%;
+}
+
+.hero-content .content h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  color: #413a3a;
+  font-weight: 400;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  letter-spacing: 1.2rem;
+}
+
+.hero-content .content h1 span {
+  font-weight: 300;
+  color: #ce9797;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.hero-content .content p {
+  max-width: 22rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  color: #ce9797;
+  overflow-wrap: break-word;
+  line-height: 2;
+  position: relative;
+  bottom: 30px;
+}
+
+form input {
+  max-width: 300px;
+  height: 50px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */

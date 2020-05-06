@@ -1,188 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
 
-    /*colors*/
-    $red: hsl(0, 36%, 70%);
-    $softred: hsl(0, 93%, 68%);
-    $softredlight: lighten($softred, 18%);
-    $darkgrayred: hsl(0, 6%, 24%);
-    $grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-    $grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    /*form factor*/
-    $mobile: 375px;
-    $desktop: 1440px;
-    /*typography*/
-    $font: 'Josefin Sans', sans-serif;
-    $bold: 600;
-    $mid: 400;
-    $light: 300;
+$base:  hsl(0, 36%, 70%);
+$accent: hsl(0, 93%, 68%);
+$neutral: hsl(0, 6%, 24%);
+$colorgrad: linear(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+$lightgrad: linear(135deg,  hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+//typography
+$font: 'Josefin Sans', sans-serif;
+$bold: 600;
+$mid: 400;
+$light: 300;
 
 
-html{
+*{
     box-sizing: border-box;
-    padding: 0;
     font-size: 16px;
+    padding: 0;
+    margin-top: 0;
 }
 
-
-.title{
-    grid-area: title;
-    display: flex;
-    align-items: center;
+header{
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.title img{
-    width: 130px;
-    position: relative;
-    left: 15%;
-}
-
-.hero{
-    grid-area: hero;
-}
-
-
-.content{grid-area: content;}
-
-.content h1{
-    font-family: $font;
-    color: $darkgrayred;
-    font-weight: $bold;
-    font-size: 3rem;
-    letter-spacing: 1.12rem;
-    line-height: 3rem;
-    position: relative;
-    left: 35%;
-    text-transform: uppercase;
-    width: min-intrinsic;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    display: table-caption;
-    display: -ms-grid;
-    -ms-grid-columns: min-content;
-}
-
-.content h1 span{
-    font-weight: $light;
-    color: $red;
-}
-
-.content p{
-    font-family: $font;
-    color: $red;
-    font-weight: $mid;
-    font-size: .89rem;
-    line-height: 1.5rem;
-    padding-right: 350px;
-    margin-bottom: 50px;
-    position: relative;
-    left: 15%;
-}
-
-.content form{
-    padding: 1rem;
-}
-.content form input{
-    width: 350px;
-    /* border: none; */
-    border: thin solid $darkgrayred;
-    border-radius: 20px;
-    padding: 15px;
-    outline: none;
-    opacity: .3;
-    position: relative;
-    left: 10%;
-}
-
-/* .content form input:invalid{
-    border-color: red;
-} */
-
-.content form .error-indicator{
-    position: relative;
-    top: 7px;
-    right: 5px;
-    visibility: hidden;
-}
-
-.content form button{
-    width: 100px;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    position: relative;
-    top: 4px;
-    cursor: pointer;
-    transition: background 3s ease-out;
-    background: $grad2;
-    outline: none;
-}
-
-.content form button:hover{
-    box-shadow:  0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    background: $softredlight;
-}
-
-// .form-control{
-//     position: relative;
-// }
-
-.form-control.error input{
-    border-color: red;
-}
-
-.form-control.error .error-indicator{
-    visibility: visible;
-}
-
-.form-control small{
-    visibility: hidden;
-    font-family: $font;
-    font-weight: $mid;
-    color: $softred;
-    position: absolute;
-    bottom: 10%;
-    left: 8%;
-}
-
-.form-control.error small{
-    visibility: visible;
-}
-
-.footer{grid-area: footer;}
 
 .container{
+    width: calc(100vw - 24.5px);
+    min-width: 300px;
+    height: 100vh;
     display: grid;
-    width: calc(100vw - 30px);
-    height: calc(100vh - 30px);
-    grid-template-areas:
-    "title hero hero"
-    "content hero hero";
-    // "footer footer footer";
-    grid-template-rows: 150px auto;
-    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    background-color: $lightgrad;
+}
+
+.hero-image img{
+    width: 100%;
+    object-fit: fill;
+}
+
+.hero-content .logo{
+    position: relative;
+    top: 50px;
+    left: 15%;
+}
+
+.hero-content .content{
+    position: relative;
+    top: 150px;
+    left: 15%;
+}
+
+.hero-content .content h1{
+    font-family: $font;
+    font-size: 4rem;
+    color: $neutral;
+    font-weight: $mid;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    letter-spacing: 1.2rem;
+
+}
+
+.hero-content .content h1 span{
+    font-weight: $light;
+    color: $base;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.hero-content .content p{
+    max-width: 22rem;
+    font-family: $font;
+    font-size: .8rem;
+    font-weight: $mid;
+    color: $base;
+    overflow-wrap: break-word;
+    line-height: 2;
+    position: relative;
+    bottom: 30px;
+    // margin-top: 0.5rem;
+}
+
+form input{
+    max-width: 300px;
+    height: 50px;
+    border-radius: 5px;
 }
 
 
-//TODO:make page responsive
-@media (max-width: 600px){
-    .container{
-        display: grid;
-        width: 100vw;
-        height: 100vh;
-        grid-template-areas:
-        "title title"
-        "hero hero"
-        "content content";
-        // "footer footer";
-        grid-template-rows: 150px auto 50px;
-        grid-gap: 5px;
-    }
-}
 
 
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
