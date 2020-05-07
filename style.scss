@@ -4,8 +4,9 @@
 $base:  hsl(0, 36%, 70%);
 $accent: hsl(0, 93%, 68%);
 $neutral: hsl(0, 6%, 24%);
+$lightbase: lighten($base, 5%);
 $lightneutral: lighten($neutral, 5%);
-$lightenaccent: lighten($accent, 20%);
+$lightaccent: lighten($accent, 20%);
 $colorgrad: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 $lightgrad: linear-gradinet(135deg,  hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 //typography
@@ -151,11 +152,16 @@ header{
     padding-left: 10px;
 }
 
+.form-control input:focus{
+    outline: none;
+}
+
 
 .form-control img{
     position: absolute;
     right: 150px;
     margin-top: 15px;
+    visibility: hidden;
 }
 
 
@@ -165,6 +171,7 @@ header{
     right: 330px;
     color: $accent;
     font-size: .8rem;
+    visibility: hidden;
 }
 
 
@@ -177,7 +184,12 @@ form button{
     background: $colorgrad;
     border: none;
     border-radius: 50px;
+    cursor: pointer;
 }
 
+//TODO: ADD  BOX SHADOW TO HOVER STATE
+form button:hover{
+    background: $lightbase;
+}
 
 

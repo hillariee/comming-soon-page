@@ -89,10 +89,15 @@ header {
   padding-left: 10px;
 }
 
+.form-control input:focus {
+  outline: none;
+}
+
 .form-control img {
   position: absolute;
   right: 150px;
   margin-top: 15px;
+  visibility: hidden;
 }
 
 .form-control small {
@@ -101,6 +106,7 @@ header {
   right: 330px;
   color: #f96262;
   font-size: .8rem;
+  visibility: hidden;
 }
 
 form button {
@@ -112,5 +118,10 @@ form button {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
   border-radius: 50px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #d6a8a8;
 }
 /*# sourceMappingURL=style.css.map */
